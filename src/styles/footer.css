@@ -1,0 +1,84 @@
+.footer {
+    width: 100%;
+    height: 80vh;
+    background-color: rgb(76, 74, 74);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.footer-top {
+    flex: 1;
+ 
+}
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    margin-top: 10px;
+    align-content: center;
+}.menuItem {
+    margin: 0 20px;
+}
+.footer-bottom {
+    flex: 7;
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(76, 74, 74);
+    color: black;
+    padding-left: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.footer-split {
+    flex: 1;
+    color: white;
+}
+.link {
+    color: white;
+    text-decoration: none;
+}
+.link:hover {
+    color: rgb(221, 15, 15);
+    padding: 8px 15px;
+    border-radius: 98px;
+  
+  }
+.footer-bot {
+    flex: 3;
+    display: flex;
+    flex-direction: row;
+}
+.authondication {
+    flex: 1;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    padding-left: 5px;
+}
+.authondication1{
+    flex: 1;
+}
+.authondication2 {
+    flex: 1;
+}
+.authondication ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    justify-content:flex-start;
+}
+.authondication ul li {
+    margin: 5px;
+}
+.authondication1 {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.authondication2 h4 {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+

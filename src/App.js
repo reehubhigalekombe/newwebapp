@@ -1,12 +1,67 @@
-
-import './App.css';
-
+import React, {useState} from 'react';
+import Home from "./pages/Home";
+import Gifts from './pages/Gifts';
+import Sneakers from "./pages/Sneakers";
+import Sport from "./pages/Sport";
+import Newsletter from "./pages/Newsletter";
+import Official from "./pages/Official";
+import Men from "./pages/Men";
+import Slips from "./pages/Slips"
+import Women from "./pages/Women"
+import Kids from "./pages/Kids"
+import Navbar from './components/Navbar';
+import Footer from "./components/Footer";
+import Puma from './pages/Puma';
+import { AppBar, Toolbar, IconButton, InputBase, Box, List, ListItem,
+  ListItemText, Typography
+ } from '@mui/material';
+ import Search from '@mui/icons-material/Search';
+import {
+   BrowserRouter as Router,
+  Routes,
+  Route}  from 'react-router-dom';
 function App() {
+  const [searchOpen, setSearchOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [items] = useState([Home, Slips, Newsletter, Men, Women, Kids, Sneakers]);
+  const [filteredItems, setFilteredItems] = useState(items);
+
+  const toggleSearch = () => {
+    setSearchOpen(!searchOpen);
+    setSearchQuery("");
+    setFilteredItems(items);
+  }
+
+    const handleSearchChange = (event) => {
+      const query = event.target.value.toLowerCase();
+      setSearchQuery(query);
+
+      const filtered = items.filter((item) => item.toLowerCase().includes(query) )
+      setFilteredItems(filtered)
+    };
   return (
-    <div className="App">
-      <h1>Helloxd Reagan</h1>
+    <div>
+      <Router>
+    
+    <Navbar/>
+    <Routes>
+        <Route path="/home" exact element={<Home/>} />
+        <Route path="/men"  exact  element={<Men/>} />
+        <Route path="/women" exact  element={<Women/>} />
+        <Route path="/kids" exact  element={<Kids/>} />
+        <Route path="/sport" exact  element={<Sport/>} />
+        <Route path="/official" exact  element={<Official/>} />
+        <Route path="/sneakers" exact  element={<Sneakers/>} />
+        <Route path="/slips" exact  element={<Slips/>} />
+        <Route path="/newsletter" exact  element={<Newsletter/>} />
+        <Route path="/gifts" exact  element={<Gifts/>} />
+        <Route path="/puma" exact  element={<Puma/>} />
+      </Routes>
+      <Footer/>
+    </Router>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
+
