@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Home from "./pages/Home";
 import Sneakers from "./pages/Sneakers";
 import Sport from "./pages/Sport";
