@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import Home from "./pages/Home";
-import Gifts from './pages/Gifts';
 import Sneakers from "./pages/Sneakers";
 import Sport from "./pages/Sport";
 import Newsletter from "./pages/Newsletter";
@@ -12,10 +11,6 @@ import Kids from "./pages/Kids"
 import Navbar from './components/Navbar';
 import Footer from "./components/Footer";
 import Puma from './pages/Puma';
-import { AppBar, Toolbar, IconButton, InputBase, Box, List, ListItem,
-  ListItemText, Typography
- } from '@mui/material';
- import Search from '@mui/icons-material/Search';
 import {
    BrowserRouter as Router,
   Routes,
@@ -54,7 +49,6 @@ function App() {
         <Route path="/sneakers" exact  element={<Sneakers/>} />
         <Route path="/slips" exact  element={<Slips/>} />
         <Route path="/newsletter" exact  element={<Newsletter/>} />
-        <Route path="/gifts" exact  element={<Gifts/>} />
         <Route path="/puma" exact  element={<Puma/>} />
       </Routes>
       <Footer/>

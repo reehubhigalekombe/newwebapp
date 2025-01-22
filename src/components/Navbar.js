@@ -33,7 +33,6 @@ function Navbar() {
           <li style={styles.menuItem}><Link to="/sneakers" className='link'>Sneakers</Link></li>
           <li style={styles.menuItem}><Link to="/slips" className='link'>Slips</Link></li>
           <li style={styles.menuItem}><Link to="/newsletter" className='link'>Newsletter</Link></li>
-          <li style={styles.menuItem}><Link to="/gifts" className='link'>Gift-cards</Link></li>
           <button><ReorderIcon/></button>
         </ul>
       </div>
