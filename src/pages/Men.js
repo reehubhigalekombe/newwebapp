@@ -25,7 +25,7 @@ const products = [
     {id: 4, image: Open, sizes: "Sizes: 37 - 44",  name: "Airforce",  oldPrice: 123, newPrice: 100, },
     {id: 5, image: Gamboots, sizes: "Sizes: 37 - 44", name: "Sneaker-Black", oldPrice: 123, newPrice: 100,},
     { id: 6, image: Rubber, sizes: "Sizes: 37 - 44",  name: "Rubber-Ladies Black", oldPrice: 123, newPrice: 100,},
-    {id: 7, image: Sports,  sizes: "Sizes: 37 - 44", name: "High-Heel Open", oldPrice: 123, newPrice: 100, },    
+    {id: 7, image: Sports,  sizes: "Sizes: 37 - 44", name: "High-Heeel Open", oldPrice: 123, newPrice: 100, },    
     { id: 8, image: timber,  sizes: "Sizes: 37 - 44", name: "Timber-Land Reinforced", oldPrice: 123, newPrice: 100, },   
     { id: 9, image: pamz,  sizes: "Sizes: 37 - 44", name: "Louis Vuiton", oldPrice: 123, newPrice: 100, },    
     { id: 10, image: mules,  sizes: "Sizes: 37 - 44", name: "Mules", oldPrice: 123, newPrice: 100, },   
