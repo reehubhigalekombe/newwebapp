@@ -16,24 +16,6 @@ import {
   Routes,
   Route}  from 'react-router-dom';
 function App() {
-  const [searchOpen, setSearchOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState("");
-  const [items] = useState([Home, Slips, Newsletter, Men, Women, Kids, Sneakers]);
-  const [filteredItems, setFilteredItems] = useState(items);
-
-  const toggleSearch = () => {
-    setSearchOpen(!searchOpen);
-    setSearchQuery("");
-    setFilteredItems(items);
-  }
-
-    const handleSearchChange = (event) => {
-      const query = event.target.value.toLowerCase();
-      setSearchQuery(query);
-
-      const filtered = items.filter((item) => item.toLowerCase().includes(query) )
-      setFilteredItems(filtered)
-    };
   return (
     <div>
       <Router>

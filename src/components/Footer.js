@@ -7,7 +7,6 @@ import YouTube from '@mui/icons-material/YouTube';
 import LinkedIn  from '@mui/icons-material/LinkedIn';
 import { Link } from 'react-router-dom';
 import mpesa from "../assests/mpesa.png";
-import kcb from "../assests/kcb (2).png"
 import paypal from "../assests/paypal.png"
 import cash from "../assests/cash.png"
 
@@ -16,11 +15,11 @@ function Footer() {
     <div  className='footer'>
       <div className='footer-top'>
         <ul className='menu'>
-          <li className='menuItem'><a href='' target='_blank' rel='nonopener nonreferrer' style={styles.icon}>    <Instagram/></a></li>
-          <li className='menuItem'><a href='' target='_blank' rel='nonopener nonreferrer' style={styles.icon}>   <Facebook/></a></li>
-          <li className='menuItem'><a href='https://x.com/HigalEkomb52804' target='_blank' rel='nonopener nonreferrer' style={styles.icon}><X/></a> </li>
-          <li className='menuItem'><a href='' target='_blank' rel='nonopener nonreferrer' style={styles.icon}>    <YouTube/></a></li>
-          <li className='menuItem'><a href='' target='_blank' rel='nonopener nonreferrer' style={styles.icon}>  <LinkedIn/></a></li>
+          <li className='menuItem'><a href='https://x.com/HigalEkomb52804' target='_blank' rel='noopener noreferrer' style={styles.icon}>    <Instagram/></a></li>
+          <li className='menuItem'><a href='https://x.com/HigalEkomb52804' target='_blank' rel='noopener noreferrer' style={styles.icon}>   <Facebook/></a></li>
+          <li className='menuItem'><a href='https://x.com/HigalEkomb52804' target='_blank' rel='noopener noreferrer' style={styles.icon}><X/></a> </li>
+          <li className='menuItem'><a href='https://x.com/HigalEkomb52804' target='_blank' rel='noopener noreferrer' style={styles.icon}>    <YouTube/></a></li>
+          <li className='menuItem'><a href='https://x.com/HigalEkomb52804' target='_blank' rel='noopener noreferrer' style={styles.icon}>  <LinkedIn/></a></li>
         </ul>
       </div>
       <div className='footer-bottom'>
