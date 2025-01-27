@@ -1,0 +1,26 @@
+.search {
+    width: 100%;
+    height: 120vh;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.results {
+    margin-top: 0px;
+    padding: 0px;
+    
+}
+.shoe-item {
+    width: 350px;
+    height: 500px;
+    border: none;
+    text-align: justify;
+    border-radius: 8px;
+    padding: 5px;
+    background-color: rgb(250, 246, 246);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+}

@@ -12,6 +12,7 @@ import kids from "../assests/sn4.jpg";
 import sneakers from "../assests/wm3.jpg";
 import sport from "../assests/sn1.jpg";
 import logo from "../assests/logo.jpg"
+import ImageContainer from "../pages/ImageContainer"
 function Home() {
   return (
     <div className='home'>
@@ -23,18 +24,12 @@ function Home() {
       <div className='home-bottom'>
         <div className=" bottom-container2">
         <h1>FEATURED PRODUCTS</h1>
-        <ul className='menu'>
-          <li className='menuItem'><img src={men}  alt='men'/></li>
-          <li className='menuItem'><img src={women}  alt='men' /></li>
-          <li className='menuItem'><img src={kids}  alt='men' /></li>
-          <li className='menuItem'><img src={sport}  alt='men' /></li>
-          <li className='menuItem'><img src={sneakers}  alt='men' /></li>
-        </ul>
+        <ImageContainer/>
         </div>
         <div className=" bottom-container3">
         <h1>BRANDS</h1>
         <ul className='menu'>
-          <li className='menuItem'><Link to="/louis"><img src={louis} alt='voiton'/></Link></li>
+          <li className='menuItem'><Link to="/louis"><img src={louis} alt='voiton' className='hike'/></Link></li>
           <li className='menuItem'><Link to="/decker"><img src={decker} alt='voiton'/></Link></li>
           <li className='menuItem'><Link to="/nike"><img src={nike} alt='voiton'/></Link></li>
           <li className='menuItem'><Link to="/puma"><img src={puma} alt='voiton'/></Link></li>

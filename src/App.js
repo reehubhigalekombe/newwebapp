@@ -11,16 +11,25 @@ import Kids from "./pages/Kids"
 import Navbar from './components/Navbar';
 import Footer from "./components/Footer";
 import Puma from './pages/Puma';
+import Gifts from "./pages/Gifts";
+import Adidas from "./pages/Adidas";
+import Louis from './pages/Louis';
+import Clarks from './pages/Clarks';
+import Skechers from './pages/Skechers';
 import {
    BrowserRouter as Router,
   Routes,
   Route}  from 'react-router-dom';
+import SearchResults from './pages/SearchResults';
+import Crocs from './pages/Crocs';
+import Deckers from './pages/Deckers';
+import WhatsAppButton from './pages/WhatsAppButton';
 function App() {
+
   return (
-    <div>
+    <div className='App'> 
       <Router>
-    
-    <Navbar/>
+    <Navbar />
     <Routes>
         <Route path="/home" exact element={<Home/>} />
         <Route path="/men"  exact  element={<Men/>} />
@@ -30,9 +39,18 @@ function App() {
         <Route path="/official" exact  element={<Official/>} />
         <Route path="/sneakers" exact  element={<Sneakers/>} />
         <Route path="/slips" exact  element={<Slips/>} />
-        <Route path="/newsletter" exact  element={<Newsletter/>} />
+        <Route path="/newsletter" exact  element={<Newsletter/>}/>
+        <Route path="/gifts" exact  element={<Gifts/>} />
         <Route path="/puma" exact  element={<Puma/>} />
+        <Route path="/adidas" exact  element={<Adidas/>} />
+        <Route path="/crocs" exact  element={<Crocs/>} />
+        <Route path="/louis" exact  element={<Louis/>} />
+        <Route path="/clarks" exact  element={<Clarks/>} />
+        <Route path="/deckers" exact  element={<Deckers/>} />
+        <Route path="/skechers" exact  element={<Skechers/>} />
+        <Route path="/search" exact  element={<SearchResults/>} />
       </Routes>
+      <WhatsAppButton/>
       <Footer/>
     </Router>
     </div>

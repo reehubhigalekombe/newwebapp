@@ -1,25 +1,47 @@
-import React from 'react';
+import React, {useState} from 'react';
 import "../styles/navbar.css";
-import  Search  from '@mui/icons-material/Search';
 import ShoppingCart  from '@mui/icons-material/ShoppingCart';
 import ReorderIcon from '@mui/icons-material/Reorder';
 import Notifications  from '@mui/icons-material/Notifications';
 import { Link } from 'react-router-dom';
-function Navbar() {
+function Navbar({onSearch}) {
+  const[openLinks, setOpenLinks] = useState(false);
+  const toggleNavbar = () => {
+    setOpenLinks(!openLinks)
+
+  }
+  const [query, setQuery] = useState("");
+  const handleSearch = (e) => {
+    e.preventDefault();
+    if (query) {
+      window.location.href = `/search?query=${query}`
+    }
+  }
   return (
     <div className='navbar'>
       <div className='nav-top'>
-<div className='left'>
+<div className='left' id={openLinks ? "open" : "close"}>
   <h3>MK COLLECTIONS</h3>
+  <div className='hiddenLinks'>
+  <Link to="/home" className='link'>Home </Link>
+  <Link to="/men" className='link'>Men</Link>
+  </div>
 </div>
 <div className='middle'>
+<div className='search-bar'>
 
+    <input type='text' placeholder='Search for an pair....'
+      value={query}
+      onChange={(e) => setQuery(e.target.value) }
+      />
+      <button onClick={handleSearch}>Search</button>
+
+    </div>
 </div>
 <div className='right'>
 <span style={styles.contact}>+254 794 517132</span>
 <span style={styles.icon}><ShoppingCart/></span>
-<span><Search/></span>
-<span><Notifications/></span>
+<span style={styles.icon}><Notifications/></span>
 </div>
       </div>
       <div className='nav-bottom'>
@@ -32,8 +54,10 @@ function Navbar() {
           <li style={styles.menuItem}><Link to="/official" className='link'>Official</Link> </li>
           <li style={styles.menuItem}><Link to="/sneakers" className='link'>Sneakers</Link></li>
           <li style={styles.menuItem}><Link to="/slips" className='link'>Slips</Link></li>
+          <li style={styles.menuItem}><Link to="/gifts" className='link'>Gifts</Link></li>
           <li style={styles.menuItem}><Link to="/newsletter" className='link'>Newsletter</Link></li>
-          <button><ReorderIcon/></button>
+          <button onClick={toggleNavbar}><ReorderIcon/></button>
+    
         </ul>
       </div>
     </div>

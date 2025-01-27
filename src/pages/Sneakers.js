@@ -19,7 +19,7 @@ import tomford from "../assests/slip23.webp";
 import tassel from "../assests/slip22.webp";
 import johnfoster  from "../assests/slip21.webp"
 const products = [
-  {id: 1,  image: Sneekers, sizes: "Sizes: 37 - 44", name: "High-Heel Closed",  oldPrice: 143,  newPrice: 100, },
+  {id: 1,  image: Sneekers, sizes: "Sizes: 37 - 44", name: "High-Heel Closed",  oldPrice: 2000,  newPrice: 100, },
     {id: 2, image: Airforce, sizes: "Sizes: 37 - 44", name: "Slay-Shoes", oldPrice: 123, newPrice: 100, },
     {id: 3, image: Slippers, sizes: "Sizes: 37 - 44",  name: "Leisure", oldPrice: 123, newPrice: 100, },
     {id: 4, image: Open, sizes: "Sizes: 37 - 44",  name: "Airforce",  oldPrice: 123, newPrice: 100, },

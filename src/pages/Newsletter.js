@@ -2,6 +2,7 @@ import React from 'react';
 import "../styles/newsletter.css"
 import photo from "../assests/slip4.webp"
 function Newsletter() {
+ 
   return (
     <div  className='newsletter'>
       <div className='top'>
@@ -31,7 +32,6 @@ function Newsletter() {
 
 </div>
       </div>
-    
     </div>
   )
 }

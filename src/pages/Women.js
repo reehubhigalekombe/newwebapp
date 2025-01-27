@@ -4,11 +4,12 @@ import { Link } from 'react-router-dom';
 import WhatsApp  from '@mui/icons-material/WhatsApp';
 import  VisibilityOutlined  from '@mui/icons-material/Visibility';
 import ShoppingBasket  from '@mui/icons-material/ShoppingBasket';
+import Facebook from '@mui/icons-material/Facebook';
 import Airforce from "../assests/wm2.jpg"
 import Slippers from "../assests/wm3.jpg";
 import Open from "../assests/kidq.jpg";
 import Gamboots from "../assests/slip3.webp";
-import Sneekers  from "../assests/wm1.jpg";
+import Sneekers  from "../assests/w1.jpg";
 import Sports  from "../assests/slips om.webp";
 import Rubber from "../assests/slip6.webp";
 import pamz from "../assests/slip8.webp"
@@ -82,6 +83,8 @@ function Women() {
                   <li className='menuItem' ><a href='https://x.com/HigalEkomb52804' target='_blank' rel='noopener noreferrer' style={{ fontSize: "40px", color: 'gray' }}><VisibilityOutlined/></a></li>
                   <li className='menuItem' ><a href='https://wa.me/+254742106109' target='_blank' rel='noopener noreferrer' style={{ fontSize: "40px", color: 'green' }}><WhatsApp/></a></li>
                   <li className='menuItem'><a href='https://x.com/HigalEkomb52804' target='_blank' rel='noopener noreferrer' style={{ fontSize: "40px", color: 'grey' }}><ShoppingBasket/></a>   </li>
+                  <li className='menuItem' ><a href='https://wa.me/+254742106109' target='_blank' rel='noopener noreferrer' style={{ fontSize: "40px", color: 'blue' }}>
+                  <Facebook/></a></li>
                   </ul>
    </div>
         </div>

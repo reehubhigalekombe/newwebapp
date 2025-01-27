@@ -11,12 +11,17 @@
   display: flex;
   flex-direction: row;
   align-content: center;
-
 }
 .middle {
   flex: 1;
   text-align: center;
-  padding-top: 6px;;
+  padding-top: 6px;
+  gap: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  text-align: center;
  
 }
 .left {
@@ -44,6 +49,36 @@
   background-color: hsl(24, 90%, 57%);
   padding: 10px 0px
 }
+
+.navbar .nav-bottom button  {
+  cursor: pointer;
+  background-color: blue;
+  color: white;
+  border: none;
+}
+.navbar .nav-bottom svg {
+  font-size: 40px;
+}
+@media only screen and (max-width: 600px) {
+ .navbar .nav-bottom a {
+  display: none;
+ }
+ .navbar .nav-bottom {
+  justify-content: flex-end;
+  padding-right: 50px;
+ }
+ .navbar .nav-bottom button {
+  display: inherit;
+ }
+}
+@media only screen and (min-width: 600px){
+  .navbar .nav-bottom button {
+    display: none;
+  }
+  .hiddenLinks {
+    display: none;
+  }
+}
 .link {
   text-decoration: none;
   color: white;
@@ -55,5 +90,32 @@
   color: rgb(99, 95, 95);
   padding: 8px 15px;
   border-radius: 98px;
+
+}
+.search-bar {
+  display: flex;
+  width: 10px;
+  align-items: center;
+  gap: 5px;
+  width: 200px;
+
+
+}
+.search-bar input {
+  padding: 5px;
+  border: 1px soild-black;
+  border-radius: 3px;
+  padding: 5px;
+}
+.search-bar button {
+  padding: 5px 10px;
+  border: none;
+  color: white;
+  border-radius: 3px;
+  cursor: pointer;
+  background-color: hsl(24, 90%, 57%) ;
+}
+.search-bar button:hover {
+  background-color: hsl(0, 0%, 4%);
 
 }

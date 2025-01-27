@@ -1,6 +1,6 @@
 import React from 'react'
-import "../styles/puma.css"
-import puma01 from "../assests/slip12.webp";
+import "../styles/deckers.css"
+import puma01 from "../assests/slip24.webp";
 import puma02 from "../assests/puma2.webp";
 import puma03 from "../assests/puma3.webp";
 import puma04 from "../assests/puma5.webp";
@@ -21,16 +21,15 @@ const products = [
   { id: 6, image: puma06, sizes: " Sizes: 35-43", name: "Puma", oldPrice: 1299, newPrice: 999 },
   { id: 7, image: puma07, sizes: " Sizes: 35-43", name: "Puma", oldPrice: 1299, newPrice: 999 },
   { id: 8, image: puma08, sizes: " Sizes: 35-43", name: "Puma", oldPrice: 1299, newPrice: 999 },
-
 ];
-function Puma() {
+function Deckers() {
   return (
-    <div className='puma'>
-      <div className='puma-top'>
+    <div className='deckers'>
+      <div className='deckers-top'>
         <ul className='menu'>
           <li className='menuItem'><Link to="/home" className='link'>Home</Link></li>
           <li style={{ color: "white" }}>&gt;&gt;</li>
-          <li className='menuItem'><Link to="/puma" className='link'>Puma</Link></li>
+          <li className='menuItem'><Link to="/deckers" className='link'>Deckers-</Link></li>
         </ul>
       </div>
       <div className='bottom'>
@@ -75,4 +74,4 @@ function Puma() {
   )
 }
 
-export default Puma;
+export default Deckers;
