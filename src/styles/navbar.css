@@ -6,22 +6,23 @@
   align-content: center;
 }
 .navbar .nav-top {
-  flex: 3;
-  background-color: whitesmoke;
+  flex: 1;
+  background-color: rgba(39, 2, 151, 0.977);
   display: flex;
   flex-direction: row;
   align-content: center;
+  color: white;
 }
 .middle {
   flex: 1;
-  text-align: center;
+  text-align: justify;
   padding-top: 6px;
   gap: 20px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  align-content: center;
-  text-align: center;
+  align-content: flex-start;
+
  
 }
 .left {
@@ -44,23 +45,53 @@
   font-family: Arial, Helvetica, sans-serif;
   color: blue;
 }
-.nav-bottom {
-  flex: 2;
-  background-color: hsl(24, 90%, 57%);
-  padding: 10px 0px
+.navbar .nav-bottom {
+  flex: 1;
+  background-color: hsl(60, 3%, 6%);
+  padding: 10px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
 }
-
 .navbar .nav-bottom button  {
   cursor: pointer;
   background-color: blue;
-  color: white;
+  color: rgb(14, 13, 13);
   border: none;
 }
 .navbar .nav-bottom svg {
-  font-size: 40px;
+  font-size: 30px;
 }
+.navbar #open {
+  padding-left: 0px;
+}
+.navbar #open h3 {
+  display: none;
+
+}
+.navbar #close h3 {
+  display: inherit;
+}
+.navbar #open .hiddenLinks {
+  display: inherit;
+  margin-left: 30px;
+}
+.navbar #close .hiddenLinks {
+  display: none;
+
+}
+.navbar #open a {
+  width: 70px;
+  margin: 5px;
+  height: 70px;
+}
+
 @media only screen and (max-width: 600px) {
  .navbar .nav-bottom a {
+  display: none;
+ }
+ .navbar .nav-top .right {
   display: none;
  }
  .navbar .nav-bottom {

@@ -13,7 +13,8 @@ import Sneekers  from "../assests/men1.jpg";
 import Sports  from "../assests/slips om.webp";
 import Rubber from "../assests/slip6.webp";
 import pamz from "../assests/slip8.webp"
-import timber from "../assests/slip01.webp";import crocodile from "../assests/slip26.webp";
+import timber from "../assests/slip01.webp";
+import crocodile from "../assests/slip26.webp";
 import mules from "../assests/slip24.webp";
 import tomford from "../assests/slip23.webp";
 import tassel from "../assests/slip22.webp";
@@ -34,7 +35,7 @@ const products = [
     { id: 13, image: johnfoster,  sizes: "Sizes: 37 - 44", name: "John Foster", oldPrice: 123, newPrice: 100, },   
     { id: 14, image: crocodile,  sizes: "Sizes: 37 - 44",  name: "Crocodile", oldPrice: 123, newPrice: 100, },  
 
-]
+]                                                                                                                                                                                                                                                        
 function Men() {
   return (
     <div className="men">
@@ -80,11 +81,10 @@ function Men() {
       </div>
       <div>
    <ul className='menu'>
-                  <li className='menuItem' ><a href='https://x.com/HigalEkomb52804' target='_blank' rel='noopener noreferrer' style={{ fontSize: "40px", color: 'gray' }}><VisibilityOutlined/></a></li>
+                  <li className='menuItem' ><a href='https://wa.me/+254742106109' target='_blank' rel='noopener noreferrer' style={{ fontSize: "40px", color: 'green' }}><VisibilityOutlined/></a></li>
                   <li className='menuItem' ><a href='https://wa.me/+254742106109' target='_blank' rel='noopener noreferrer' style={{ fontSize: "40px", color: 'green' }}><WhatsApp/></a></li>
                   <li className='menuItem'><a href='https://x.com/HigalEkomb52804' target='_blank' rel='noopener noreferrer' style={{ fontSize: "40px", color: 'grey' }}><ShoppingBasket/></a>   </li>
-                  <li className='menuItem' ><a href='https://wa.me/+254742106109' target='_blank' rel='noopener noreferrer' style={{ fontSize: "40px", color: 'blue' }}>
-                  <Facebook/></a></li>
+                  <li className='menuItem' ><a href='https://wa.me/+254742106109' target='_blank' rel='noopener noreferrer' style={{ fontSize: "40px", color: 'blue' }}><Facebook/></a></li>
                   </ul>
    </div>
         </div>

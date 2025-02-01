@@ -33,14 +33,17 @@
  .bottom-container3 {
     flex: 1;
     justify-content: center;
-    text-align: center;
     background-color: antiquewhite;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  
  }
  .bottom-container4 {
     flex: 1;
     justify-content: center;
     text-align: center;
-    line-height: 20px;
+    line-height: 27px;
  }
  .hike {
     

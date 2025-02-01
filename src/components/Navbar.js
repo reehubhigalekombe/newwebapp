@@ -23,13 +23,23 @@ function Navbar({onSearch}) {
 <div className='left' id={openLinks ? "open" : "close"}>
   <h3>MK COLLECTIONS</h3>
   <div className='hiddenLinks'>
-  <Link to="/home" className='link'>Home </Link>
-  <Link to="/men" className='link'>Men</Link>
-  </div>
+        <Link to="/home" className='link'>Home </Link>
+      <Link to="/men" className='link'>Men</Link>
+      <Link to="/women" className='link'>Women</Link>
+      <Link to="/kids" className='link'>Kids</Link>
+      <Link to="/sport" className='link'>Sport</Link>
+      <Link to="/official" className='link'>Official</Link>
+      <Link to="/sneakers" className='link'>Sneakers</Link>
+      <Link to="/slips" className='link'>Slips</Link>
+      <Link to="/gifts" className='link'>Gifts</Link>
+      <Link to="/shaz" className='link'>ShoesInformation</Link>
+      <Link to="/newsletter" className='link'>Newsletter</Link>
+
+        </div>
+
 </div>
 <div className='middle'>
 <div className='search-bar'>
-
     <input type='text' placeholder='Search for an pair....'
       value={query}
       onChange={(e) => setQuery(e.target.value) }
@@ -39,26 +49,24 @@ function Navbar({onSearch}) {
     </div>
 </div>
 <div className='right'>
-<span style={styles.contact}>+254 794 517132</span>
+  <span style={styles.contact}>+254 794 517132</span>
 <span style={styles.icon}><ShoppingCart/></span>
 <span style={styles.icon}><Notifications/></span>
+
+
 </div>
       </div>
       <div className='nav-bottom'>
-        <ul style={styles.menu}>
-          <li style={styles.menuItem}><Link to="/home" className='link'>Home </Link></li>
-          <li style={styles.menuItem}><Link to="/men" className='link'>Men</Link></li>
-          <li style={styles.menuItem}><Link to="/women" className='link'>Women</Link></li>
-          <li style={styles.menuItem}> <Link to="/kids" className='link'>Kids</Link></li>
-          <li style={styles.menuItem}> <Link to="/sport" className='link'>Sport</Link></li>
-          <li style={styles.menuItem}><Link to="/official" className='link'>Official</Link> </li>
-          <li style={styles.menuItem}><Link to="/sneakers" className='link'>Sneakers</Link></li>
-          <li style={styles.menuItem}><Link to="/slips" className='link'>Slips</Link></li>
-          <li style={styles.menuItem}><Link to="/gifts" className='link'>Gifts</Link></li>
-          <li style={styles.menuItem}><Link to="/newsletter" className='link'>Newsletter</Link></li>
-          <button onClick={toggleNavbar}><ReorderIcon/></button>
-    
-        </ul>
+      <Link to="/home" className='link'>Home </Link>
+      <Link to="/men" className='link'>Men</Link>
+      <Link to="/women" className='link'>Women</Link>
+      <Link to="/kids" className='link'>Kids</Link>
+      <Link to="/sport" className='link'>Sport</Link>
+      <Link to="/official" className='link'>Official</Link>
+      <Link to="/sneakers" className='link'>Sneakers</Link>
+      <Link to="/slips" className='link'>Slips</Link>
+      <Link to="/newsletter" className='link'>Newsletter</Link>
+      <button onClick={toggleNavbar}><ReorderIcon/></button>
       </div>
     </div>
   )

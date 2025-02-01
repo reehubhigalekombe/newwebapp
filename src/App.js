@@ -1,4 +1,5 @@
 import React from 'react';
+import "./App.css"
 import Home from "./pages/Home";
 import Sneakers from "./pages/Sneakers";
 import Sport from "./pages/Sport";
@@ -23,7 +24,8 @@ import {
 import SearchResults from './pages/SearchResults';
 import Crocs from './pages/Crocs';
 import Deckers from './pages/Deckers';
-import WhatsAppButton from './pages/WhatsAppButton';
+import FloatingButton from './pages/FlaotingButton';
+import ShoesInformation from './components/ShoesInformation';
 function App() {
 
   return (
@@ -48,9 +50,11 @@ function App() {
         <Route path="/clarks" exact  element={<Clarks/>} />
         <Route path="/deckers" exact  element={<Deckers/>} />
         <Route path="/skechers" exact  element={<Skechers/>} />
+        <Route path="/shoe.id" exact  element={<ShoesInformation/>} />
         <Route path="/search" exact  element={<SearchResults/>} />
+        
       </Routes>
-      <WhatsAppButton/>
+      <FloatingButton/>
       <Footer/>
     </Router>
     </div>

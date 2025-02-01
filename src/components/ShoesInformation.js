@@ -1,12 +1,12 @@
-import React from 'react';
-import "../styles/gifts.css"
-import { Link } from 'react-router-dom';
+import React, {useState} from 'react'
+import "../styles/shoesInformation.css"
+import { useParams, useNavigate } from 'react-router-dom';
 import Airforce from "../assests/men2.jpg"
 import Slippers from "../assests/men3.jpg";
 import Open from "../assests/kidq.jpg";
 import Gamboots from "../assests/slip3.webp";
 import Sneekers  from "../assests/men1.jpg";
-import Sports  from "../assests/slip26.webp";
+import Sports  from "../assests/slips om.webp";
 import Rubber from "../assests/slip6.webp";
 import pamz from "../assests/slip8.webp"
 import timber from "../assests/slip01.webp";
@@ -16,7 +16,7 @@ import tomford from "../assests/slip23.webp";
 import tassel from "../assests/slip22.webp";
 import johnfoster  from "../assests/slip21.webp"
 const shoes = [
-  {id: 1,  image: Sneekers, sizes: "Sizes: 37 - 44", name: "High-Heel Closed",  Price: 1400, },
+    {id: 1,  image: Sneekers, sizes: "Sizes: 37 - 44", name: "High-Heel Closed",  Price: 1400, },
     {id: 2, image: Airforce, sizes: "Sizes: 37 - 44", name: "Slay-Shoes", Price: 1399 },
     {id: 3, image: Slippers, sizes: "Sizes: 37 - 44",  name: "Leisure", PerformanceEventTimingrice: 1299 },
     {id: 4, image: Open, sizes: "Sizes: 37 - 44",  name: "Airforce",  Price: 123},
@@ -31,22 +31,41 @@ const shoes = [
     { id: 13, image: johnfoster,  sizes: "Sizes: 37 - 44", name: "John Foster", Price: 123 },   
     { id: 14, image: crocodile,  sizes: "Sizes: 37 - 44",  name: "Crocodile", Price: 123,  },  
 ]
-function Gifts() {
+function ShoesInformation() {
+    const {id} =useParams();
+    const shoe = shoes.find((shoe) =>shoe.id === parseInt(id))
+    const [quantity, setQuantity] = useState(1)
+    const navigate = useNavigate()
+    if (!shoe) return <h2>The your are searching cannot be found</h2>
+    const handleOrder = () => {
+        alert(`You've ordered ${quantity} pairs of ${shoe.name}`);
+        navigate("/")
+    }
   return (
-    <div className='gifts'>
-      <h1>Our esteemed customers! Welcome to Mk Collection</h1>
-      <div>
-        {shoes.map((shoe) => (
-          <div key={shoe.id} className='shoeBox'>
-            <img src={shoe.image} alt={shoe.name} className='imagecalbri' />
-<h3>{shoe.name} - ${shoe.price}  </h3>
-<Link to={`/ShoesInformation/${shoe.id}`} >View the details</Link>
-          </div>
-        ) )}
-      </div>
+    <div className='shoesInformation'>
+      <h1>{shoe.name}</h1>
+      <img src={shoe.image} alt={shoe.name} width='200'/>
+      <p>Price: Ksh.{shoe.Price}</p>
+      <p>Available Sizes: ${shoe.sizes}</p>
+      <p>Mode of Payment:
+      <select>
+        <option>Cash</option>
+        <option>MPESA</option>
+        <option>Paypal</option>
+      </select>
+      </p>
+      <label>
+        The number of Shoes chosed:
+      </label>
+      <input type='number'
+       value={quantity}
+       min={1}
+       onChange={(e) => setQuantity(e.target.value) } 
+       />
+        <button onClick={handleOrder}  >Order</button>  
       
     </div>
   )
 }
 
-export default Gifts
+export default ShoesInformation

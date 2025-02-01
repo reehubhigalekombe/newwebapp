@@ -1,7 +1,6 @@
 import React from 'react'
 import "../styles/whatsappButton.css"
-function WhatsAppButton() {
-    const phonenumber = "254742106109";
+function FloatingButton() {
     const defaultMessage = "Hello our esteemed Customers! Welcome to MK Collection: How can I help you"
 
   return (
@@ -18,4 +17,4 @@ function WhatsAppButton() {
   )
 }
 
-export default WhatsAppButton
+export default FloatingButton

@@ -6,11 +6,6 @@ import louis from "../assests/louis.png";
 import decker from "../assests/deka.png";
 import nike from "../assests/nike.png";
 import puma from "../assests/puml.png"
-import men from "../assests/men1.jpg"
-import women from "../assests/wm2.jpg";
-import kids from "../assests/sn4.jpg";
-import sneakers from "../assests/wm3.jpg";
-import sport from "../assests/sn1.jpg";
 import logo from "../assests/logo.jpg"
 import ImageContainer from "../pages/ImageContainer"
 function Home() {
@@ -25,16 +20,15 @@ function Home() {
         <div className=" bottom-container2">
         <h1>FEATURED PRODUCTS</h1>
         <ImageContainer/>
+        <h1>BRANDS</h1>
         </div>
         <div className=" bottom-container3">
-        <h1>BRANDS</h1>
-        <ul className='menu'>
-          <li className='menuItem'><Link to="/louis"><img src={louis} alt='voiton' className='hike'/></Link></li>
-          <li className='menuItem'><Link to="/decker"><img src={decker} alt='voiton'/></Link></li>
-          <li className='menuItem'><Link to="/nike"><img src={nike} alt='voiton'/></Link></li>
-          <li className='menuItem'><Link to="/puma"><img src={puma} alt='voiton'/></Link></li>
-        </ul>
-
+  
+        <Link to="/louis"><img src={louis} alt='voiton' className='hike'/></Link>
+        <Link to="/decker"><img src={decker} alt='voiton'/></Link>
+        <Link to="/nike"><img src={nike} alt='voiton'/></Link>
+        <Link to="/puma"><img src={puma} alt='voiton'/></Link>
+        
         </div>
         <div className=" bottom-container4">
      <h1>Join the MK Collections Family</h1>
