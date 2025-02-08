@@ -18,25 +18,10 @@ function Navbar({onSearch}) {
     }
   }
   return (
-    <div className='navbar'>
+    <nav className='navbar'>
       <div className='nav-top'>
-<div className='left' id={openLinks ? "open" : "close"}>
+<div className='left'>
   <h3>MK COLLECTIONS</h3>
-  <div className='hiddenLinks'>
-        <Link to="/home" className='link'>Home </Link>
-      <Link to="/men" className='link'>Men</Link>
-      <Link to="/women" className='link'>Women</Link>
-      <Link to="/kids" className='link'>Kids</Link>
-      <Link to="/sport" className='link'>Sport</Link>
-      <Link to="/official" className='link'>Official</Link>
-      <Link to="/sneakers" className='link'>Sneakers</Link>
-      <Link to="/slips" className='link'>Slips</Link>
-      <Link to="/gifts" className='link'>Gifts</Link>
-      <Link to="/shaz" className='link'>ShoesInformation</Link>
-      <Link to="/newsletter" className='link'>Newsletter</Link>
-
-        </div>
-
 </div>
 <div className='middle'>
 <div className='search-bar'>
@@ -49,14 +34,13 @@ function Navbar({onSearch}) {
     </div>
 </div>
 <div className='right'>
-  <span style={styles.contact}>+254 794 517132</span>
-<span style={styles.icon}><ShoppingCart/></span>
-<span style={styles.icon}><Notifications/></span>
-
-
+  <span className='contact'>+254 794 517132</span>
+<span className='icon'><ShoppingCart/></span>
+<span className='icon'><Notifications/></span>
+<button className='menu-toggle' onClick={toggleNavbar} ><ReorderIcon/></button>
 </div>
-      </div>
-      <div className='nav-bottom'>
+      </div >
+      <div className={`nav-bottom ${openLinks ? "open" : ""}  `}>
       <Link to="/home" className='link'>Home </Link>
       <Link to="/men" className='link'>Men</Link>
       <Link to="/women" className='link'>Women</Link>
@@ -65,42 +49,11 @@ function Navbar({onSearch}) {
       <Link to="/official" className='link'>Official</Link>
       <Link to="/sneakers" className='link'>Sneakers</Link>
       <Link to="/slips" className='link'>Slips</Link>
+      <Link to="/location" className='link'>Location</Link>
       <Link to="/newsletter" className='link'>Newsletter</Link>
-      <button onClick={toggleNavbar}><ReorderIcon/></button>
+
       </div>
-    </div>
+    </nav>
   )
-}
-const styles = {
-  contact: {
-    fontSize: "20px",
-    fontWeight: "bold",
-    fontFamily: "Arial, Helvetica, sans-serif"
-  
-  },
-  icon: {
-    fontSize: "26px",
-    color: "hsl(24, 90%, 57%)"
-  },
- menu: {
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  listStyleType: "none",
-  margin: "0"
- },
- menuItem: {
-  margin: "0  15px"
- },
- link: {
-  textDecoration: "none",
-  color: "white",
-  fontSize: "16px",
-  transition: "color 0.3s",
-  fontFamily: "Arial, Helvetica, sans-serif"
- },
- linkHover: {
-  color: "black"
- }
 }
 export default Navbar

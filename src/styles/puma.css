@@ -13,6 +13,13 @@
     background-color: rgb(100, 98, 98);
 
 }
+.puma-top ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 0;
+}
 .bottom {
     display: flex;
     flex-direction: row;

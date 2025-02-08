@@ -48,7 +48,7 @@ function SearchResults() {
             shoe.name.toLocaleLowerCase().includes(searchQuery.toLocaleLowerCase())
      );
         setFilteredShoes(results);
-    }, [location.shoe] 
+    }, [location.search, shoes] 
 ) 
   return (
     <div className='search'>

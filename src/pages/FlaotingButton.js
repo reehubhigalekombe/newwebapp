@@ -17,4 +17,4 @@ function FloatingButton() {
   )
 }
 
-export default FloatingButton
+export default FloatingButton;

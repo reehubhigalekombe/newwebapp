@@ -12,6 +12,7 @@ import { Link } from 'react-router-dom';
 import ShoppingBasket from '@mui/icons-material/ShoppingBasket';
 import WhatsApp from '@mui/icons-material/WhatsApp';
 import VisibilityOutlined from '@mui/icons-material/Visibility';
+import Facebook from '@mui/icons-material/Facebook';
 const products = [
   { id: 1, image: puma01, sizes: " Sizes: 35-43", name: "Puma", oldPrice: 1299, newPrice: 999 },
   { id: 2, image: puma02, sizes: " Sizes: 35-43", name: "Puma", oldPrice: 1299, newPrice: 999 },
@@ -56,13 +57,13 @@ function Puma() {
                 <span className='oldPrice'>Ksh.{product.oldPrice}</span>
                 <span className='newPrice'>Ksh.{product.newPrice}</span>
               </div>
-              <div >
-                <ul className='menu'>
-                  <li className='menuItem' ><a href='https://x.com/HigalEkomb52804' target='_blank' rel='noopener noreferrer' style={{ fontSize: "40px", color: 'gray' }}><VisibilityOutlined /></a></li>
-                  <li className='menuItem' ><a href='https://wa.me/+254742106109' target='_blank' rel='noopener noreferrer' style={{ fontSize: "40px", color: 'green' }}><WhatsApp /></a></li>
-                  <li className='menuItem'><a href='https://x.com/HigalEkomb52804' target='_blank' rel='noopener noreferrer' style={{ fontSize: "40px", color: 'grey' }}><ShoppingBasket /></a>   </li>
-                </ul>
-              </div>
+              <div className='card-style'>
+      <a href='https://x.com/HigalEkomb52804' target='_blank' rel='noopener noreferrer' style={{ fontSize: "40px", color: 'gray' }}><VisibilityOutlined/></a>
+   <a href='https://wa.me/+254742106109' target='_blank' rel='noopener noreferrer' style={{ fontSize: "40px", color: 'green' }}><WhatsApp/></a>
+   <a href='https://x.com/HigalEkomb52804' target='_blank' rel='noopener noreferrer' style={{ fontSize: "40px", color: 'grey' }}><ShoppingBasket/></a>
+   <a href='https://wa.me/+254742106109' target='_blank' rel='noopener noreferrer' style={{ fontSize: "40px", color: 'blue' }}><Facebook/></a>      
+
+   </div>
             </div>
           )
 

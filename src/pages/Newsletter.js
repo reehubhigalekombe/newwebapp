@@ -6,7 +6,7 @@ function Newsletter() {
   return (
     <div  className='newsletter'>
       <div className='top'>
-      <h1>MK COLLECTIONS</h1>pp,l0k,oldPrice
+      <h1>MK COLLECTIONS</h1>
       <h2>All your brand needs in Shoes Covered</h2>
       <p>Kindly enter your information below for updates, promotion and Verified Market Reports</p>
       

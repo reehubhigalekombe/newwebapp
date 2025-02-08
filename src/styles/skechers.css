@@ -8,10 +8,17 @@
     justify-content: center;
 
 }
-.skechers {
+.skechers-top{
     flex: 1;
     background-color: rgb(100, 98, 98);
 
+}
+.skechers-top ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 0;
 }
 .bottom {
     display: flex;

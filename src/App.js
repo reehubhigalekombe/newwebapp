@@ -26,6 +26,8 @@ import Crocs from './pages/Crocs';
 import Deckers from './pages/Deckers';
 import FloatingButton from './pages/FlaotingButton';
 import ShoesInformation from './components/ShoesInformation';
+import { GoogleMap } from '@react-google-maps/api';
+import Location from "./pages/Location"
 function App() {
 
   return (
@@ -52,6 +54,8 @@ function App() {
         <Route path="/skechers" exact  element={<Skechers/>} />
         <Route path="/shoe.id" exact  element={<ShoesInformation/>} />
         <Route path="/search" exact  element={<SearchResults/>} />
+        <Route path="/google" exact  element={<GoogleMap/>} />
+        <Route path="/location" exact  element={<Location/>} />
         
       </Routes>
       <FloatingButton/>
@@ -61,5 +65,4 @@ function App() {
   )
 }
 
-export default App
-
+export default App;

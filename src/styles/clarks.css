@@ -8,10 +8,16 @@
     justify-content: center;
 
 }
-.louis-top {
+.clarks-top {
     flex: 1;
     background-color: rgb(100, 98, 98);
-
+}
+.clarks-top ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 0;
 }
 .bottom {
     display: flex;

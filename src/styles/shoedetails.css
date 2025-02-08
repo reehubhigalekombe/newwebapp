@@ -1,0 +1,27 @@
+.shoedtails {
+    text-align: center;
+    padding: 20px;
+}
+.product-image {
+    width: 300px;
+    height: auto;
+
+}
+.price {
+    font-size: 20px;
+}
+.oldPrice  {
+    text-decoration: line-through;
+    color: red;
+    margin-right: 10px;
+}
+.newPrice {
+    font-weight: bold;
+    color: green;
+}
+button {
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}

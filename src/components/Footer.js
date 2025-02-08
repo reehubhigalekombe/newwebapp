@@ -14,13 +14,13 @@ function Footer() {
   return (
     <div  className='footer'>
       <div className='footer-top'>
-        <ul className='menu'>
-          <li className='menuItem'><a href='https://x.com/HigalEkomb52804' target='_blank' rel='noopener noreferrer' style={styles.icon}>    <Instagram/></a></li>
-          <li className='menuItem'><a href='https://x.com/HigalEkomb52804' target='_blank' rel='noopener noreferrer' style={styles.icon}>   <Facebook/></a></li>
-          <li className='menuItem'><a href='https://x.com/HigalEkomb52804' target='_blank' rel='noopener noreferrer' style={styles.icon}><X/></a> </li>
-          <li className='menuItem'><a href='https://x.com/HigalEkomb52804' target='_blank' rel='noopener noreferrer' style={styles.icon}>    <YouTube/></a></li>
-          <li className='menuItem'><a href='https://x.com/HigalEkomb52804' target='_blank' rel='noopener noreferrer' style={styles.icon}>  <LinkedIn/></a></li>
-        </ul>
+      <div className='card-style'>
+      <a href='https://x.com/HigalEkomb52804' target='_blank' rel='noopener noreferrer' style={styles.icon}>    <Instagram/></a>
+        <a href='https://x.com/HigalEkomb52804' target='_blank' rel='noopener noreferrer' style={styles.icon}>   <Facebook/></a>
+       <a href='https://x.com/HigalEkomb52804' target='_blank' rel='noopener noreferrer' style={styles.icon}><X/></a> 
+     <a href='https://x.com/HigalEkomb52804' target='_blank' rel='noopener noreferrer' style={styles.icon}>    <YouTube/></a>
+<a href='https://x.com/HigalEkomb52804' target='_blank' rel='noopener noreferrer' style={styles.icon}>  <LinkedIn/></a>
+      </div>
       </div>
       <div className='footer-bottom'>
      <div className='footer-split'>
@@ -43,7 +43,7 @@ function Footer() {
       <h2>Quick Links</h2>
       <p><Link to="/home" className='link'>Blog</Link></p>
       <p><Link to="/home" className='link'>Delivery Location</Link></p>
-      <p><Link to="/home" className='link'>Countrywide Branches</Link></p>
+      <p><Link to="/home" className='link'> Branches</Link></p>
       <p><Link to="/home" className='link'>Monthly Offers</Link></p>
       <p><a href='https://wa.me/+25474210610' target='_blank' rel='noopener noreferrer' className='link'>Shopping Guidance</a></p>
       </div>
@@ -66,7 +66,7 @@ function Footer() {
           </ul>
         </div>
         <div className='authondication1'><h4>All Rights Reserved &copy;Musyoki2024</h4></div>
-        <div className='authondication2'><h4>Designed and Developed by G-Space Technologies - Higal &copy;2024</h4></div>
+        <div className='authondication2'><h4>Designed and Developed by G-Space Technologies - Higal &copy;2025</h4></div>
       </div>
     </div>
   )
@@ -74,6 +74,7 @@ function Footer() {
 const styles = {
   icon: {
     color: "white",
+    fontSize: "30px"
   }
 }
 
