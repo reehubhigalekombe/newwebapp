@@ -12,7 +12,7 @@ function Home() {
       <div className='home-top'>
        <video autoPlay loop muted playsInline className='myBackgroundVideo'>
 <source src="/videos/shel6.mp4" type='video/mp4' />
-Your Browser does not support video tag
+Your Browser does nott support video tag
        </video >
        <div className='over-lay'>
         <h1>Discover Affordable footwears at MK Collections </h1>
