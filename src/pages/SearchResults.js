@@ -1,6 +1,7 @@
 
-import React, {useState, useEffect} from 'react'
-import { useLocation} from 'react-router-dom';
+import React, {useState, useEffect, useMemo} from 'react'
+import { useLocation, useNavigate} from 'react-router-dom';
+import SearchIcon from '@mui/icons-material/Search';
 import "../styles/search.css"
 import Airforce from "../assests/wm2.jpg"
 import Slippers from "../assests/wm3.jpg";
@@ -22,9 +23,10 @@ import Gamboots from "../assests/slip3.webp";
 import Sports  from "../assests/slips om.webp";
 function SearchResults() {
     const location = useLocation();
+    const navigate = useNavigate();
     const [query, setQuery] = useState("")
     const [filteredShoes, setFilteredShoes] = useState([]);
-    const shoes = [
+    const shoes = useMemo (() =>    [
         {id: 1,  image: Sneekers, sizes: "Sizes: 37 - 44", name: "High-Heel Closed",  oldPrice: 143,  newPrice: 100, },
         {id: 2, image: Airforce, sizes: "Sizes: 37 - 44", name: "Slay-Shoes", oldPrice: 123, newPrice: 100, },
         {id: 3, image: Slippers, sizes: "Sizes: 37 - 44",  name: "Leisure", oldPrice: 123, newPrice: 100, },
@@ -39,7 +41,8 @@ function SearchResults() {
         { id: 12, image: tomford,  sizes: "Sizes: 37 - 44", name: "Tom Ford", oldPrice: 123, newPrice: 100, },   
         { id: 13, image: johnfoster,  sizes: "Sizes: 37 - 44", name: "John Foster", oldPrice: 123, newPrice: 100, },   
         { id: 14, image: crocodile,  sizes: "Sizes: 37 - 44",  name: "Crocodile", oldPrice: 123, newPrice: 100, },  
-    ];
+    ], []  )
+ 
     useEffect (() => {
         const params = new URLSearchParams(location.search);
         const searchQuery = params.get("query") || "";
@@ -49,9 +52,29 @@ function SearchResults() {
      );
         setFilteredShoes(results);
     }, [location.search, shoes] 
-) 
-  return (
-    <div className='search'>
+) ;
+const handleSearch = () =>{
+    if (query.trim() !==""  ) {
+        navigate(`?query=${query}`)
+    }
+};
+const handleKeyPress = (e) => {
+    if(e.key === "Enter") {
+        handleSearch()
+    }
+};
+    <div className='search-container'>
+<div className='search-box'>
+    <input type='text'  value={query} 
+    onChange={(e) => setQuery(e.target.value)}
+    onKeyPress={handleKeyPress} 
+    placeholder='Search fro shoe item'
+    />
+    <button onClick={handleSearch} className='search-button'  >
+        <SearchIcon/>
+    </button>
+
+</div>
         <h3>Your Search Results for: "{query}"</h3>
         <div className='results' >
             {filteredShoes.length > 0 ? (
@@ -67,14 +90,8 @@ function SearchResults() {
         <span className='newPrice'>Ksh.{shoe.newPrice}</span>
       </div>
       <div className='card-style'>
-        <ul className='menu'>
-            <li className='menuItem'>      <a href='https://x.com/HigalEkomb52804' target='_blank' rel='noopener noreferrer' style={{ fontSize: "40px", color: 'gray' }}><VisibilityOutlined/></a></li>
-            <li className='menuItem'></li>
-            <li className='menuItem'></li>
-            <li className='menuItem'></li>
-            <li className='menuItem'></li>
-        </ul>
 
+     <a href='https://x.com/HigalEkomb52804' target='_blank' rel='noopener noreferrer' style={{ fontSize: "40px", color: 'gray' }}><VisibilityOutlined/></a>
    <a href='https://wa.me/+254742106109' target='_blank' rel='noopener noreferrer' style={{ fontSize: "40px", color: 'green' }}><WhatsApp/></a>
    <a href='https://x.com/HigalEkomb52804' target='_blank' rel='noopener noreferrer' style={{ fontSize: "40px", color: 'grey' }}><ShoppingBasket/></a>
    <a href='https://wa.me/+254742106109' target='_blank' rel='noopener noreferrer' style={{ fontSize: "40px", color: 'blue' }}><Facebook/></a>  
@@ -92,7 +109,6 @@ function SearchResults() {
         
       
     </div>
-  )
 }
 
 export default SearchResults

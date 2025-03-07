@@ -1,12 +1,15 @@
 .whatsappButton {
     position: fixed;
-    z-index: 1000;
-    right: 30px;
-    bottom: 20px;
+    top: 75%;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
+
 .myimage {
-    width: 35px;
-    height: 35px;
+    width: 20px;
+    height: 20px;
 }
 .anchorr {
     text-decoration: none;
@@ -18,4 +21,28 @@
     background-color:#25D366 ;
     border-radius: 50%;
     box-shadow:   "0 4px 8px rgba(0,0,0,0.2)";
-}
+}   
+.anchorr1 {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color:red;
+    border-radius: 50%;
+    box-shadow:   "0 4px 8px rgba(0,0,0,0.2)";
+}   
+.anchorr2 {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color:white;
+    border-radius: 50%;
+    box-shadow:   "0 4px 8px rgba(0,0,0,0.2)";
+}   
+
+

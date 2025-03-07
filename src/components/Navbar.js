@@ -4,8 +4,10 @@ import ShoppingCart  from '@mui/icons-material/ShoppingCart';
 import ReorderIcon from '@mui/icons-material/Reorder';
 import Notifications  from '@mui/icons-material/Notifications';
 import { Link } from 'react-router-dom';
+import Auth from '../pages/Auth';
 function Navbar({onSearch}) {
   const[openLinks, setOpenLinks] = useState(false);
+  const [showAuth, setShowAuth] = useState(false)
   const toggleNavbar = () => {
     setOpenLinks(!openLinks)
 
@@ -21,6 +23,8 @@ function Navbar({onSearch}) {
     <nav className='navbar'>
       <div className='nav-top'>
 <div className='left'>
+
+
   <h3>MK COLLECTIONS</h3>
 </div>
 <div className='middle'>
@@ -38,6 +42,8 @@ function Navbar({onSearch}) {
 <span className='icon'><ShoppingCart/></span>
 <span className='icon'><Notifications/></span>
 <button className='menu-toggle' onClick={toggleNavbar} ><ReorderIcon/></button>
+<button className='auth-button'  onClick={() => setShowAuth(!showAuth)}
+>{showAuth? "Close" : "SIGNIN"}</button>
 </div>
       </div >
       <div className={`nav-bottom ${openLinks ? "open" : ""}  `}>
@@ -51,8 +57,8 @@ function Navbar({onSearch}) {
       <Link to="/slips" className='link'>Slips</Link>
       <Link to="/location" className='link'>Location</Link>
       <Link to="/newsletter" className='link'>Newsletter</Link>
-
       </div>
+      {showAuth && <Auth/>}
     </nav>
   )
 }

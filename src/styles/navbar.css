@@ -8,7 +8,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 5px 10px;
   color: white;
 }
 
@@ -21,6 +21,7 @@
   flex-grow: 1;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .search-bar {
@@ -28,7 +29,7 @@
   align-items: center;
   gap: 5px;
   width: 100%;
-  max-width: 300px;
+  max-width: 500px;
 }
 
 .search-bar input {
@@ -39,10 +40,10 @@
 }
 
 .search-bar button {
-  padding: 5px 10px;
+  padding: 3px 10px;
   border: none;
-  color: white;
-  background-color: hsl(24, 90%, 57%);
+  color: black;
+  background-color: white;
   border-radius: 3px;
   cursor: pointer;
 }
@@ -125,4 +126,13 @@
   .nav-bottom.open {
     display: flex;
   }
+}
+.auth-button {
+  color: black;
+  background-color: white;
+  padding: 5px 15px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  font-size: bold;
+
 }

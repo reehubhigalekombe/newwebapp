@@ -1,0 +1,40 @@
+.myContainer {
+    position: absolute;
+    top: 70px;
+    right: 15px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    z-index: 1000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    background-color: white;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.input {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    border-radius: 1px soild-black;
+    border-radius: 4px;
+}
+button {
+    width: 100px;
+    padding: 10px;
+    background-color:#007BFF ;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+    border: navajowhite;
+}
+.toggle {
+    color: blue;
+    cursor: pointer;
+}
+.message {
+    color: red;
+}

@@ -14,8 +14,12 @@
     justify-content: center;
     gap: 15px;
     padding: 0;
+    text-decoration: none;
 }
 .bottom {
     flex: 5;
     flex-direction: row;
+}
+.product-link {
+    text-decoration: none;
 }

@@ -33,7 +33,7 @@ function Footer() {
      </div>
      <div className='footer-split'>
       <h2>About us</h2>
-      <p><Link to="/home" className='link'>Delivery policy</Link></p>
+      <p><Link to="/home" styles={{color: "white"}}>Delivery policy</Link></p>
       <p><Link to="/home" className='link'>Terms & Conditions</Link></p>
       <p><Link to="/home" className='link'> Newsletter</Link></p>
       <p><Link to="/home" className='link'>Gift  Cards</Link></p>

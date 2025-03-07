@@ -14,7 +14,7 @@ function Newsletter() {
       <div className='bottom'>
         <div className='partionSide'>
         </div>
-        <div className='partionCenter' styles={{backgroundImage: `url(${photo})`}}>
+        <div className='partionCenter'>
         <form action='mailto: elonreaganp@gmail.com' id='contact-form' method='post' styles={{backgroundImage: `url(${photo})`}}>
           <label htmlFor='name'><span style={styles.required}>*</span>First Name:</label><br/>
           <input type='text'  placeholder='first name' />

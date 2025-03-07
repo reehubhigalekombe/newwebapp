@@ -47,7 +47,7 @@ function ShoesInformation() {
       <img src={shoe.image} alt={shoe.name} width='200'/>
       <p>Price: Ksh.{shoe.Price}</p>
       <p>Available Sizes: ${shoe.sizes}</p>
-      <p>Mode of Payment:
+     <p>Mode of Payment:
       <select>
         <option>Cash</option>
         <option>MPESA</option>
@@ -55,7 +55,7 @@ function ShoesInformation() {
       </select>
       </p>
       <label>
-        The number of Shoes chosed:
+        Th e number of Shoes chosed:
       </label>
       <input type='number'
        value={quantity}

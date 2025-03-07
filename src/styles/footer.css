@@ -41,6 +41,12 @@
   .footer-split p {
     margin: 5px 0;
     font-size: 14px;
+    color: white;
+  }
+  .footer-split p Link .link{
+    margin: 5px 0;
+    font-size: 14px;
+    color: white;
   }
   
   .footer-split a {

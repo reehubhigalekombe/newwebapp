@@ -1,115 +1,109 @@
 .slippers {
-    width: 100%;
-    height: auto;
-    justify-content: center;
-    align-content: center;
-    display: flex;
-    flex-direction: column;
-    background-color: whitesmoke;
-    padding-left: 0px;
-    margin-top: 0px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 0px;
+  background-color: white;
+  padding-left: 0px;
 }
 .slippers-top {
-    flex: 1;
-    background-color: rgb(100, 98, 98);
-    margin-top: 0px;
+  flex: 1;
+  margin-top: 0px;
+  background-color: rgb(100, 98, 98);
 }
 .slippers-top ul {
-  list-style: none;
   display: flex;
   justify-content: center;
   gap: 15px;
-  padding: 0;
+  padding: 0px;
+  list-style: none;
 }
-.slippers-bottom { 
-    flex: 5;
-    display: flex;
-    flex-direction: row;
-    margin-top: 0px;
-     justify-content: center;
-  
+.slippers-bottom{
+  flex: 6;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
 }
 .bottom-left {
-    flex: 1;
-    background-color:  rgba(39, 2, 151, 0.977);
+  flex: 1;
+  padding: 10px;
+  background-color: rgba(39, 2, 151, 0.977);
 }
 .bottom-right {
-    flex: 5;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
-    padding: 10px;
-    background-color: white;
- }
+  flex: 5;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  padding: 10px;
+  background-color: white;
+}
 .card {
-    width: 300px;
-    height: 460px;
-    border: none;
-    text-align: justify;
-    border-radius: 8px;
-    padding: 5px;
-    background-color: rgb(250, 246, 246);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
- }
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border: none;
+  text-align: justify;
+  padding: 5px;
+  border-radius: 8px;
+  background-color: rgb(250, 246, 246);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 .image {
-    width: 100%;
-    border-radius: 8px;
-    margin-bottom: 0px;
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 0px;
 }
-.name {
-    font-size: 18px;
-    margin: 3px 0;
-    color: black;
-    text-align: justify;
-    line-height: normal;
-}
-.size {
-     font-size: 14px;
-     text-align: justify;
-     margin-top: 0px;
-      
-}
- .priceContainer {
-     display: flex;
-    text-align: justify;
-    gap: 10px;
- }
-.oldPrice {
-    text-decoration: line-through;
-    font-weight: bold;
-    font-size: 20px;
-    color: gray;
-    font-style: italic;
-}
-    .newPrice {
-    color: green;
-    font-weight: bold;
-    font-size: 20px;
-      }
-      .categories {
-        padding-left: 8px;
-        color:  hsl(24, 90%, 57%);
-        font-family: Arial, Helvetica, sans-serif;
-      }
-      .brands {
-        color: hsl(24, 90%, 57%);
-        font-family: Arial, Helvetica, sans-serif;
-        padding-left: 8px;
-        text-align: justify;
+.card-style {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
 
-      }
-      .icons {
-    text-align: center;
-    justify-content: center;
+}
+@media (max-width: 1024px) {
+  .slippers-bottom {
+    flex-direction: column;
     align-items: center;
-    align-content: center;
+  }
+  .bottom-left {
+    width: 100%;
+    text-align: center;
+  }
+  .bottom-right{
+    grid-template-columns: repeat(1 1fr);
+  }
+}
+@media (max-width: 786px) {
+  .slippers-bottom{
+    flex-direction: column;
+    align-items: center;
+  }
+  .bottom-left {
+    width: 100%;
+    text-align: center;
+}
+.bottom-right {
+    grid-template-columns: repeat(1, 1fr);
+}
+.card-style {
+  flex-direction: column;
+  gap: 10px;
+}
+}
+@media (max-width: 480px) {
+  .slippers-top ul {
+    flex-direction: column;
+    align-items: center;
+  }
+    .bottom-right {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .card {
+      max-width: 100%;
+    }
+  }
 
-      }
-      .card-style {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 40px;
-
-      }
-     
