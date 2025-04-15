@@ -1,11 +1,11 @@
 .newsletter {
     width: 100%;
-    min-height: 100vh;
+    min-height: 90vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 40px 20px;
+
     background-color: #f8f9fa;
 }
 .newsletter h1 {
@@ -55,7 +55,7 @@
     border-radius: 10px;
 }
 .newsletter form {
-    line-height: 1.8;
+    line-height: 1.7;
     text-align: center;
     width: 100%;
     max-width: 500px;
@@ -75,7 +75,6 @@ form label {
     margin-bottom: 5px;
     width: 100%;
 }
-
 form input {
     width: 100%;
     max-width: 100%;

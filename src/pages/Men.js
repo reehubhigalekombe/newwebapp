@@ -5,17 +5,15 @@ import WhatsApp  from '@mui/icons-material/WhatsApp';
 import  VisibilityOutlined  from '@mui/icons-material/Visibility';
 import ShoppingBasket  from '@mui/icons-material/ShoppingBasket';
 import Facebook from '@mui/icons-material/Facebook';
-import {products} from "../Data/products"
-                                                                                                                                                                                                                                      
+import { menProducts } from '../Data/products';
 function Men() {
-  const menProducts = products.filter(product => product.category === "men")
   return (
     <div className="men">
     <div className='men-top'>
     <ul className='menu'>
   <li className='menuItem'><Link to="/home" className='link'>Home</Link></li>
   <li style={{color: "white"}}>&gt;&gt;</li>
-  <li className='menuItem'><Link to="/men" className='link'>Men</Link></li>
+  <li className='menuItem'><Link to="/women" className='link'>Men</Link></li>
 </ul>
     </div>
     <div className='bottom'>
@@ -43,7 +41,7 @@ function Men() {
     </div>
     <div className='bottom-right'>
       {menProducts.map((product) => (
-        <div key = {product.id} className='card'>
+        <div key = {product} className='card'>
           <Link to={`/product/${product.id}`} className='product-link' >
           <img src={product.image} alt={product.name} className='image'/>
           <h3 className='sizes' >{product.sizes} </h3>
@@ -52,15 +50,14 @@ function Men() {
         <span className='oldPrice'>Ksh.{product.oldPrice}</span>
         <span className='newPrice'>Ksh.{product.newPrice}</span>
       </div>
-    
-      </Link>
+          </Link>
+  
       <div className='card-style'>
       <a href='https://x.com/HigalEkomb52804' target='_blank' rel='noopener noreferrer' style={{ fontSize: "40px", color: 'gray' }}><VisibilityOutlined/></a>
    <a href='https://wa.me/+254742106109' target='_blank' rel='noopener noreferrer' style={{ fontSize: "40px", color: 'green' }}><WhatsApp/></a>
    <a href='https://x.com/HigalEkomb52804' target='_blank' rel='noopener noreferrer' style={{ fontSize: "40px", color: 'grey' }}><ShoppingBasket/></a>
    <a href='https://wa.me/+254742106109' target='_blank' rel='noopener noreferrer' style={{ fontSize: "40px", color: 'blue' }}><Facebook/></a>      
    </div>
-
         </div>
 
       ))

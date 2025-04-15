@@ -5,10 +5,9 @@ import WhatsApp  from '@mui/icons-material/WhatsApp';
 import Facebook from '@mui/icons-material/Facebook';
 import  VisibilityOutlined  from '@mui/icons-material/Visibility';
 import ShoppingBasket  from '@mui/icons-material/ShoppingBasket';
-import { products } from '../Data/products';
+import { sportProducts } from '../Data/products';
 
 function Sport() {
-    const sportProducts = products.filter(product => product.category === "sport")
   return (
     <div className="sport">
     <div className='sport-top'>

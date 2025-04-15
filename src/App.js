@@ -1,6 +1,6 @@
-import React, {useEffect} from 'react';
-import axios from "axios"
-import "./App.css"
+import React, {useEffect, useState} from 'react';
+import axios from "axios";
+import "./App.css";
 import Home from "./pages/Home";
 import Sneakers from "./pages/Sneakers";
 import Sport from "./pages/Sport";
@@ -13,7 +13,6 @@ import Slips from "./pages/Slips"
 import Navbar from './components/Navbar';
 import Footer from "./components/Footer";
 import Puma from './pages/Puma';
-import Gifts from "./pages/Gifts";
 import Adidas from "./pages/Adidas";
 import Louis from './pages/Louis';
 import Clarks from './pages/Clarks';
@@ -32,14 +31,17 @@ import Location from "./pages/Location";
 import ShoeDetails from './components/ShoeDetails';
 function App() {
 
-useEffect (() => {
-  axios.get("http://localhost:5500/api/hello")
-  .then((response) => console.log("Backend Response:", response.data))
-  .catch((error) => {
-    console.error("Error connecting to the backend:", error);
-    
-  })
+const [shoesData, setShoesData] = useState([]);
 
+useEffect (() => {
+  axios.get("http://localhost:5500/api/shoes")
+  .then((response) => {
+    console.log("Fetched Data from MongoDB:", response.data);
+    setShoesData(response.data);
+  })
+  .catch((error) => {
+    console.error("Error fetching data from backend:", error);
+  })
 }, [] );
   return (
     <div className='App'> 
@@ -47,15 +49,14 @@ useEffect (() => {
     <Navbar />
     <Routes>
         <Route path="/home" exact element={<Home/>} />
-        <Route path="/men"  exact  element={<Men/>} />
-        <Route path="/slips" exact  element={<Slips/>} />
-        <Route path="/women" exact  element={<Women/>} />
+        <Route path="/men"  exact  element={<Men shoesData={shoesData}/>} />
+        <Route path="/slips" exact  element={<Slips shoesData={shoesData} />} />
+        <Route path="/women" exact  element={<Women shoesData={shoesData}/>} />
 <Route path="/kids" exact  element={<Kids/>} />
 <Route path="/sport" exact  element={<Sport/>} />
 <Route path="/official" exact  element={<Official/>} />
 <Route path="/sneakers" exact  element={<Sneakers/>} />
         <Route path="/newsletter" exact  element={<Newsletter/>}/>
-        <Route path="/gifts" exact  element={<Gifts/>} />
         <Route path="/puma" exact  element={<Puma/>} />
         <Route path="/adidas" exact  element={<Adidas/>} />
         <Route path="/crocs" exact  element={<Crocs/>} />
@@ -68,6 +69,8 @@ useEffect (() => {
         <Route path="/google" exact  element={<GoogleMap/>} />
         <Route path="/location" exact  element={<Location/>} />
         <Route path="/product/:id" exact  element={<ShoeDetails/>} />
+        <Route path="/search" element={<SearchResults />} />
+
         
       </Routes>
       <FlaotingButton/>

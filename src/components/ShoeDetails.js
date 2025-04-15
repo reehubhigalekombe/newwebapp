@@ -1,29 +1,49 @@
-import React, {useState}from 'react'
+import React, {useState}from 'react';
+import axios from 'axios';
 import { useParams, useNavigate } from 'react-router-dom'
-import {products} from "../Data/products";
+import {menProducts, kidsProducts, womenProducts, sportProducts, slipsProducts, officialProducts, adidasProducts, crocsProducts, footerProducts,
+  deckersProducts, clarksProducts, skechersProducts, louisProducts, pumaProducts } from "../Data/products";
 import "../styles/shoedetails.css"
 import WhatsApp  from '@mui/icons-material/WhatsApp';
 function ShoeDetails() {
     const {id } = useParams()
-    const [quantity, setQuantity] = useState(1)
+    const [quantity, setQuantity] = useState(1);
+    const [loading, setLoading] = useState(false)
     const [size, setSize] = useState(25)
-    const product =  products.find((item) => item.id === parseInt(id));
+    const allProducts = [...menProducts, ...kidsProducts, ...womenProducts, ...sportProducts, ...slipsProducts, ...officialProducts, ...adidasProducts,
+       ...crocsProducts, ...deckersProducts, ...clarksProducts, ...louisProducts, ...skechersProducts, ...pumaProducts, ...footerProducts];
+
+    const product =  allProducts.find((item) => item.id === parseInt(id));
     const navigate = useNavigate()
     if(!product) {
         return <h3>Product is not found!</h3>
     }
-    const  handleOrder = () => {
-      alert(`"You have ordered ${quantity} pairs of ${product.name}`)
+    const  handleOrder = async () => {
+      setLoading(true)
+    try {
+      const response = await axios.post("http://localhost:5500/api/stkpush", {
+        phone: "254708374149",
+        amount: product.newPrice*quantity,
+        size,
+        quantity
+      });
+      console.log(response.data);
+      alert("STK Push sent! Check your Phone");
       navigate("/")
+    } catch(error)
+    {
+      console.error("STK Push Error:", error)
+      alert("Failed to initiate payment: " + error?.response?.data.message || error.message)
+    } finally{setLoading(false)}
     }
       const whatsAppNumber = "+254742106109";
-      const whatsAppMessage  =  `Hello, I would like to order ${quantity} pairs of ${product.name} size ${product.size}. Is it available`
+      const whatsAppMessage  =  `Hello, I would like to order ${quantity} pairs of ${product.name} size ${size}. Is it available`
       const whatsAppURL = `http://wa.me/${whatsAppNumber}?text=${encodeURIComponent(whatsAppMessage)}  `
   return (
     <div className='shoedetails'>
       <img src={product.image}  alt={product.name} className='product-image'  />
       <h2>{product.name}</h2>
-      <p>{product.sizes}</p> 
+      <p>{product.size}</p> 
       <p className='price'>
 <span className='oldPrice'>Ksh.{product.oldPrice}</span>
 <span className='newPrice'>Ksh.{product.newPrice}</span>
@@ -37,7 +57,7 @@ function ShoeDetails() {
          defaultValue={1}/><br/>
       
       <label>
-        The size os shoes:
+        The size of shoes:
       </label>
       <input type='number'
        value={size}
@@ -53,13 +73,12 @@ function ShoeDetails() {
        }
        } 
        /> <br/>
-        <button onClick={handleOrder}  >ORDER</button> <br/>
 
         <label>Order Via WhatsApp: </label>
 <button > <a href={whatsAppURL} target='_blank' rel='noopener noreferrer'  ><WhatsApp style={{color: "green"}} /></a></button>
         <p>Mode of Payment:</p>
         <div className='payment-methods'>
-    <button ><a href='https://x.com/HigalEkomb52804' target='_blank' rel='noopener noreferrer'>MPESA</a></button>
+        <button onClick={handleOrder} disabled={loading}>{loading ? "Processing...." : "MPESA"}</button> <br/>
     <button ><a href='https://x.com/HigalEkomb52804' target='_blank' rel='noopener noreferrer'>PAYPAlL</a></button>
     <button ><a href='https://x.com/HigalEkomb52804' target='_blank' rel='noopener noreferrer'>MASTER CARD</a></button>
         </div>  
@@ -68,3 +87,5 @@ function ShoeDetails() {
 }
 
 export default ShoeDetails;
+
+

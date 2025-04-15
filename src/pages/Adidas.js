@@ -1,27 +1,13 @@
 import React from 'react'
 import "../styles/adidas.css"
-import puma01 from "../assests/puma1.webp";
-import puma02 from "../assests/puma2.webp";
-import puma03 from "../assests/puma3.webp";
-import puma04 from "../assests/puma5.webp";
-import puma05 from "../assests/puma5.webp";
-import puma06 from "../assests/puma6.webp";
-import puma07 from "../assests/puma1.webp";
-import puma08 from "../assests/puma1.webp";
+
 import { Link } from 'react-router-dom';
 import ShoppingBasket from '@mui/icons-material/ShoppingBasket';
 import WhatsApp from '@mui/icons-material/WhatsApp';
 import VisibilityOutlined from '@mui/icons-material/Visibility';
-const products = [
-  { id: 1, image: puma01, sizes: " Sizes: 35-43", name: "Puma", oldPrice: 1299, newPrice: 999 },
-  { id: 2, image: puma02, sizes: " Sizes: 35-43", name: "Puma", oldPrice: 1299, newPrice: 999 },
-  { id: 3, image: puma03, sizes: " Sizes: 35-43", name: "Puma", oldPrice: 1299, newPrice: 999 },
-  { id: 4, image: puma04, sizes: " Sizes: 35-43", name: "Puma", oldPrice: 1299, newPrice: 999 },
-  { id: 5, image: puma05, sizes: " Sizes: 35-43", name: "Puma", oldPrice: 1299, newPrice: 999 },
-  { id: 6, image: puma06, sizes: " Sizes: 35-43", name: "Puma", oldPrice: 1299, newPrice: 999 },
-  { id: 7, image: puma07, sizes: " Sizes: 35-43", name: "Puma", oldPrice: 1299, newPrice: 999 },
-  { id: 8, image: puma08, sizes: " Sizes: 35-43", name: "Puma", oldPrice: 1299, newPrice: 999 },
-];
+import {adidasProducts} from "../Data/products"
+
+
 function Adidas() {
   return (
     <div className='adidas'>
@@ -46,7 +32,7 @@ function Adidas() {
                   </div>
         </div>
         <div className='bottom-right'>
-          {products.map((product) => (
+          {adidasProducts.map((product) => (
             <div key={product.id} className='card'>
               <img src={product.image} alt={product.name} className='image' />
               <h3 className='size'> {product.sizes} </h3>

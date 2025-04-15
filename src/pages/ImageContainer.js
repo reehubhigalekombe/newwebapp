@@ -1,21 +1,17 @@
 import React from 'react'
 import "../styles/imageContainer.css"
-import Open from "../assests/kidq.jpg";
-import Gamboots from "../assests/slip3.webp";
-import Sneekers  from "../assests/men1.jpg";
-import Rubber from "../assests/slip6.webp";
-import timber from "../assests/slip01.webp";
-import Slippers from "../assests/men3.jpg";
-import Airforce from "../assests/men2.jpg";
 import { Link } from 'react-router-dom';
+ 
+const backendURL = "http://localhost:5500"
+
 const imageAnchor = [
-    {url : Sneekers, link: "/men"},
-    {url : Airforce, link: "/women"},
-    {url : Open, links: "/kids"},
-    {url : Gamboots, link: "/sport"},
-    {url : Slippers, link: "/official"},
-    {url : Rubber, link: "/sneakers"},
-    {url : timber, link: "/slips"}
+    {url : `${backendURL}/uploads/men1.jpg`, link: "/men"},
+    {url : `${backendURL}/uploads/men2.jpg`, link: "/women"},
+    {url : `${backendURL}/uploads/kidq.jpg`, links: "/kids"},
+    {url : `${backendURL}/uploads/slip3.webp`, link: "/sport"},
+    {url : `${backendURL}/uploads/puma3.webp`, link: "/official"},
+    {url : `${backendURL}/uploads/slip6.webp`, link: "/sneakers"},
+    {url : `${backendURL}/uploads/slip01.webp`, link: "/slips"}
 ]
 function ImageContainer() {
    

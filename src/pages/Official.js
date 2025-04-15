@@ -5,7 +5,7 @@ import WhatsApp  from '@mui/icons-material/WhatsApp';
 import  VisibilityOutlined  from '@mui/icons-material/Visibility';
 import ShoppingBasket  from '@mui/icons-material/ShoppingBasket';
 import Facebook from '@mui/icons-material/Facebook';
-import {products} from "../Data/products"
+import {officialProducts} from "../Data/products"
 
 function Official() {
   return (
@@ -42,7 +42,7 @@ function Official() {
   </div>
  </div>
  <div className='bottom-right'>
-  {products.map((product) => (
+  {officialProducts.map((product) => (
     <div key={product} className='card'>
            <Link to={`/product/${product.id}`} className='product-link' >
            <img src={product.image} alt={product.name} className='image' />

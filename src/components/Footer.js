@@ -6,10 +6,6 @@ import Instagram from '@mui/icons-material/Instagram';
 import YouTube from '@mui/icons-material/YouTube';
 import LinkedIn  from '@mui/icons-material/LinkedIn';
 import { Link } from 'react-router-dom';
-import mpesa from "../assests/mpesa.png";
-import paypal from "../assests/paypal.png"
-import cash from "../assests/cash.png"
-
 function Footer() {
   return (
     <div  className='footer'>
@@ -33,7 +29,7 @@ function Footer() {
      </div>
      <div className='footer-split'>
       <h2>About us</h2>
-      <p><Link to="/home" styles={{color: "white"}}>Delivery policy</Link></p>
+      <p><Link to="/home" >Delivery policy</Link></p>
       <p><Link to="/home" className='link'>Terms & Conditions</Link></p>
       <p><Link to="/home" className='link'> Newsletter</Link></p>
       <p><Link to="/home" className='link'>Gift  Cards</Link></p>
@@ -60,9 +56,9 @@ function Footer() {
         <div className='authondication'>
           <h4>Accepted Payment Methods</h4>
           <ul>
-            <li><a href='https://wa.me/+25474210610' target='_blank' rel='noopener noreferrer'><img src={mpesa} alt='payment' /></a></li>
-            <li><a href='https://wa.me/+25474210610' target='_blank' rel='noopener noreferrer'><img src={cash} alt='payment' /></a></li>
-            <li><a href='https://wa.me/+25474210610' target='_blank' rel='noopener noreferrer'><img src={paypal} alt='payment' /></a></li>
+            <li><a href='https://wa.me/+25474210610' target='_blank' rel='noopener noreferrer'><img src="http://localhost:5500/uploads/mpesa.png" alt='payment' /></a></li>
+            <li><a href='https://wa.me/+25474210610' target='_blank' rel='noopener noreferrer'><img src="http://localhost:5500/uploads/cash.png" alt='payment' /></a></li>
+            <li><a href='https://wa.me/+25474210610' target='_blank' rel='noopener noreferrer'><img src="http://localhost:5500/uploads/paypal.png" alt='payment' /></a></li>
           </ul>
         </div>
         <div className='authondication1'><h4>All Rights Reserved &copy;Musyoki2024</h4></div>

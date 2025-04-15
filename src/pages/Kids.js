@@ -5,10 +5,9 @@ import WhatsApp  from '@mui/icons-material/WhatsApp';
 import  VisibilityOutlined  from '@mui/icons-material/Visibility';
 import ShoppingBasket  from '@mui/icons-material/ShoppingBasket';
 import Facebook from '@mui/icons-material/Facebook';
-import {products} from "../Data/products"
+import {kidsProducts} from "../Data/products"
 
 function Kids() {
-  const kidsProducts = products.filter(products => products.category === "kids");
   return (
     <div className="kids">
     <div className='kids-top'>
@@ -43,7 +42,7 @@ function Kids() {
     </div>
     <div className='bottom-right'>
       {kidsProducts.map((product) => (
-        <div key = {product.d} className='card'>
+        <div key = {product.id} className='card'>
                     <Link to={`/product/${product.id}`} className='product-link' >
                     <img src={product.image} alt={product.name} className='image'/>
           <h3 className='sizes' >{product.sizes} </h3>

@@ -6,34 +6,25 @@
   
   }
   
-  .search-box {
-    display: flex;
-    align-items: center;
-    border: 2px solid #ccc;
-    border-radius: 25px;
-    overflow: hidden;
-    padding: 5px;
-    
-  }
-  
-  .search-box input {
-    border: none;
-    padding: 10px;
-    outline: none;
-    width: 250px;
-    font-size: 16px;
-  }
-  
-  .search-button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-    font-size: 20px;
-  
-  }
-  
-  .search-button svg {
-    color: #333;
-  }
-  
+.search-bar {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 4px 10px;
+  background-color: #ffffff;
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  padding: 4px 10px;
+  flex: 1;
+  font-size: 16px;
+}
+
+.search-icon {
+  color: black;
+  cursor: pointer;
+}
+
